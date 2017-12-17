@@ -53,7 +53,7 @@ def orientacion():
         yaw = o["yaw"]
         print("pitch {0} roll {1} yaw {2}".format(pitch,roll, yaw))
 
-
+#---------------------MENU------------------------
 def menu(respuesta):
     if respuesta == "1": # Si ha elegido la temperatura
         temperatura()
@@ -62,6 +62,9 @@ def menu(respuesta):
         presion()
 
     elif respuesta == "3": # Si ha elegido la humedad
+        humedad()
+
+    elif respuesta == "4": # Si ha elegilo la orientacion
         orientacion()
 
     else: # En caso de que se quivoque
@@ -69,9 +72,9 @@ def menu(respuesta):
         menu(respuesta = input("Que quieres hacer?"))
 
 
-# Aquí se empieza a ejecutar todo
+#-----------CONFIGURACION INICIAL--------------
 if __name__ == "__main__":
-    acciones = ['temperatura = 1', 'presion = 2', 'humedad = 3']
+    acciones = ['temperatura = 1', 'presion = 2', 'humedad = 3', 'orientacion = 4']
     print(acciones)
     respuesta = input("Que quieres hacer?")
     menu(respuesta)
